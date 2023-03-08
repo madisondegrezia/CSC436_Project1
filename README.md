@@ -32,8 +32,10 @@ Allow a user to refetch the rate; limit them to once per 5 minutes (that should 
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/89614960/223839553-0aceff54-eee6-40f3-9945-aee0d14af71a.png" width=60% height=60%>
+
 The above image shows the current rates for the different currencies.
 
 <img src="https://user-images.githubusercontent.com/89614960/223839661-6245c896-a5f8-4dda-98d3-ad3057d0bbe8.png" width=60% height=60%>
+
 The above image allows the user to sort the different currency rates and shows the conversions for the different currencies to bitcoin.
 
