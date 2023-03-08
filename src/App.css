@@ -1,0 +1,72 @@
+/* div {
+  color: teal;
+}
+*/
+p {
+  text-align: center;
+
+} 
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  /* margin: 3%; */
+}
+
+.btn:hover {
+  background-color: rgb(29, 149, 186); /* Green */
+  border: 2px solid black; /* Green */
+  transition-duration: 0.4s;
+}
+
+.btn-1 {
+  margin-bottom: 3%;
+}
+
+.btn-2 {
+  margin-left: 1%;
+}
+
+body {
+  /*background-color: rgb(53, 165, 199); */
+  background-color : rgb(29, 149, 186);
+}
+ html {
+  /* background-color: rgb(110, 207, 237); */
+  background-color : rgb(29, 149, 186);
+}
+
+hr {
+  border-top: 1px dashed black;
+}
