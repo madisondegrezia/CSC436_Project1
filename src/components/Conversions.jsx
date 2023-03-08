@@ -14,6 +14,8 @@ const Conversions = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [rateArr, setRateArr] = useState('');
+    const [disable, setDisable] = useState(false);
+    const [timer, setTimer] = useState('');
 
     const getRateData = () => {
         setLoading(true);
@@ -77,6 +79,13 @@ const Conversions = () => {
         getRateData() 
     },[])
 
+    const refetchRates = () => {
+        getRateData();
+        setDisable(true);
+        // 5 mins is = to 300000 milliseconds
+        setTimer(setTimeout(() => {setDisable(false)}, 300000));
+    }
+
     if(rateData!==null) {     //checks if object is not null
         const usdRateCon = (1/usdRate).toFixed(9);
         const eurRateCon = (1/eurRate).toFixed(9);
@@ -89,7 +98,7 @@ const Conversions = () => {
             <p className="mt-5">Time Updated: {rateData.time.updated}</p>
             <p>Local Time: {newLocal}</p>
             <hr></hr> 
-            <button onClick={getRateData} className="btn btn-1 btn-3">Refresh Rate Data</button>  
+            <button onClick={refetchRates} className="btn btn-1 btn-3">Refresh Rate Data</button>  
             <button className="btn btn-1" onClick={sortRates}>Sort Exchange Rates</button>
                 <small> {direction} </small>
                 {rateArr.map((rate) => (

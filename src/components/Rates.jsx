@@ -11,7 +11,8 @@ const Rates = () => {
     const [usdRate, setUSDRate] = useState(0);
     const [eurRate, setEURRate] = useState(0);
     const [gbpRate, setGBPRate] = useState(0);
-
+    const [disable, setDisable] = useState(false);
+    const [timer, setTimer] = useState('');
 
     const getRateData = () => {
         setLoading(true);
@@ -41,6 +42,13 @@ const Rates = () => {
 
         getRateData() 
     },[])
+
+    const refetchRates = () => {
+        getRateData();
+        setDisable(true);
+        // 5 mins is = to 300000 milliseconds
+        setTimer(setTimeout(() => {setDisable(false)}, 300000));
+    }
     
     if(rateData!==null){
         const usdRateCon = (1/usdRate).toFixed(9);
@@ -55,7 +63,7 @@ const Rates = () => {
                 <p className="mt-5">Time Updated: {rateData.time.updated}</p>
                 <p>Local Time: {newLocal}</p>
                 <hr></hr>   
-                <button onClick={getRateData} className="btn btn-1">Refresh Rate Data</button>
+                <button onClick={refetchRates} className="btn btn-1">Refresh Rate Data</button>
                 <p>1 USD is equal to {usdRateCon} BTC , and 1 BTC is equal to ${rateData.bpi.USD.rate_float} USD</p>
                 <p>1 EUR is equal to {eurRateCon} BTC, and 1 BTC is equal to €{rateData.bpi.EUR.rate_float} EUR</p>
                 <p>1 GBP is equal to {gbpRateCon} BTC, and 1 BTC is equal to £{rateData.bpi.GBP.rate_float} GBP </p>
