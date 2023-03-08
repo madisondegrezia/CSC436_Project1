@@ -29,7 +29,11 @@ Always visible, regardless of the section displayed, in the app should be the fo
 The data date (hint it comes back from the API) should always be visible to the user. Let’s see if you can convert the UTC time to the current browser’s time zone and output both times.
 Allow a user to refetch the rate; limit them to once per 5 minutes (that should persist in refreshes; that is, if a user hits refresh, they should not be able to hit refresh again (and be warned if they try) in the same browser (assuming they don’t clear their local data manually) for 5 minutes, regardless if they refresh the browser.
 
-fghj
-## Screenshots
 
+## Screenshots
+<img src="https://user-images.githubusercontent.com/89614960/223839553-0aceff54-eee6-40f3-9945-aee0d14af71a.png" width=60% height=60%>
+The above image shows the current rates for the different currencies.
+
+<img src="https://user-images.githubusercontent.com/89614960/223839661-6245c896-a5f8-4dda-98d3-ad3057d0bbe8.png" width=60% height=60%>
+The above image allows the user to sort the different currency rates and shows the conversions for the different currencies to bitcoin.
 
