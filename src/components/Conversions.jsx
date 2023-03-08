@@ -88,7 +88,8 @@ const Conversions = () => {
         <div>
             <p className="mt-5">Time Updated: {rateData.time.updated}</p>
             <p>Local Time: {newLocal}</p>
-            <hr></hr>   
+            <hr></hr> 
+            <button onClick={getRateData} className="btn btn-1 btn-3">Refresh Rate Data</button>  
             <button className="btn btn-1" onClick={sortRates}>Sort Exchange Rates</button>
                 <small> {direction} </small>
                 {rateArr.map((rate) => (
